@@ -26,11 +26,20 @@ pour le réutiliser dans une autre fonction
 // Exécutez les deux fonctions
 
 // 1°) Créez la fonction calcule1
-
-
+function calcule1() {
+    let resultat1 = 2+3;
+    console.log(resultat1);
+    return resultat1;
+}
 
 // 2°) Créez la fonction calcule2
 
-
+function calcule2() {
+    const resultat2 = (calcule1()*calcule1());
+    console.log(resultat2);
+    return resultat2;
+}
 
 // 3°) Appelez les fonctions calcule1() et calcule2() pour exécuter les calculs et afficher les résultats dans la console
+calcule1();
+ calcule2()
