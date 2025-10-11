@@ -24,7 +24,16 @@ Une variable globale est accessible de partout
 //    - donne l'ordre d'afficher dans la console "Dans affiche2 : nbre1 =  "
 // 3°) Appeler affiche2
 // 4°) Expliquer ce qui se passe
+function affiche1() {
+let nbre1 = 2
+}
 
+function affiche2() {
+    let nbre2 = 3
+    console.log(`Dans affiche2 : nbre2 =  ${nbre2}`);
+    //console.error(`Dans affiche2 : nbre1 =  ${nbre1}`);//erreurs
+}
+affiche2();
 // EXERCICE 2 : Variable globale
 // (on sort la variable nbre1 de la fonction affiche1)
 // 1°) Initialiser une variable nbre1 à la valeur 2
@@ -36,7 +45,17 @@ Une variable globale est accessible de partout
 //    - donne l'ordre d'afficher dans la console "Dans affiche2 : nbre1 =  "
 // 4°) Appeler affiche1 et affiche2
 // 5°) Expliquer ce qui se passe
-
+let nbr3 =2;
+function affiche3() {
+    console.log(`Dans affich3 : nbre3 = ${nbr3} `);
+}
+function affiche4() {
+    let nbr4=  3;
+    // console.log(`Dans affich4 : nbre3 = ${nbr3} `);
+    console.log(`Dans affich4 : nbre4 = ${nbr4} `);
+}
+affiche3();
+affiche4();
 // EXERCICE 3 : Variable globale - variante
 // (on déclare la variable nbre1 hors de la fonction affiche1 et on l'affecte à l'intérieur de la fonction affiche1)
 // 1°) Déclarer une variable nbre1 sans lui affecter de valeur
@@ -49,7 +68,18 @@ Une variable globale est accessible de partout
 //    - donne l'ordre d'afficher dans la console "Dans affiche2 : nbre1 =  "
 // 4°) Appeler affiche1 et affiche2
 // 5°) Expliquer ce qui se passe
-
+let nbre5;
+function affiche5() {
+    nbre5  = 2;
+    console.log(`Dans affich5 : nbre5 = ${nbre5} `);
+}
+function affiche6() {
+    let nbre6=  3;
+    console.log(`Dans affich6 : nbre3 = ${nbre5} `);
+    console.log(`Dans affich6 : nbre4 = ${nbre6} `);
+}
+affiche5();
+affiche6();
 /*
 RESUME :
 - Portée d'une variable = ensemble des endroits où elle est accessible
