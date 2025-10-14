@@ -19,9 +19,9 @@
 */
 
 // Fonction anonyme avec la syntaxe "fat arrow function"
-
-// Utilisation de la fonction pour saluer Thomas dans la console
-
+const myFunction2 = (prenom) => {
+    return `Boujour ${prenom}`;
+}
 
 
 /*
@@ -41,4 +41,8 @@ N.B. Dans certains cas particuliers, on peut simplifier la syntaxe des fonctions
 
 
 // Utilisation de la fonction pour saluer Thomas dans la console
+
+const myFunction = function (prenom) {return `boujour ${prenom}`};
+// Utilisation de la fonction pour saluer Thomas dans la console
+console.log(myFunction("julien"));
 
