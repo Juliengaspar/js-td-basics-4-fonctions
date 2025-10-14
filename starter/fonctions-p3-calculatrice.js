@@ -11,9 +11,36 @@ FONCTIONS - PRÉPA 3 : Une première calculatrice
    - 12 / 0 (qui doit donner Infinity)
 Aide : votre fonction s'exécute avec le pattern suivant : calculer(nb1, "+", nb2)
 */
-
 // Déclaration de la fonction calculer
+function calculer(nbre1,operateur, nbre2) {
+    let result;
+    switch(operateur) {
+        case "+":
+            result = nbre1+nbre2;
+            break;
+        case "-":
+            result = nbre1-nbre2;
+            break;
+        case "*":
+            result = nbre1*nbre2;
+            break;
+        case "/":
+            result = nbre1/nbre2;
+            break;
 
+        default:
+            console.log("mauvais operateur");
+    }
+    return result;
+}
 
 // Utilisation de la fonction calculer
-
+let resulta;
+resulta = calculer(4, "+", 6);
+console.log(resulta)
+resulta = calculer(4, "-", 6);
+console.log(resulta)
+resulta = calculer(2, "*", 0);
+console.log(resulta)
+resulta = calculer(12, "/", 0);
+console.log(resulta)
