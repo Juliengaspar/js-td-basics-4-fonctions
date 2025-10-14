@@ -14,22 +14,29 @@ Utiliser la fonction Math.min pour afficher dans la console
 - le minimum de 19 et 9
 - le minimum de 1 et 1
 */
-
+console.log("function Math.min(...numbers) ");
 console.log(Math.min(4.5, 5)); // 4.5
 console.log(Math.min(19, 9));  // 9
 console.log(Math.min(1, 1));   // 1
 
 // La fonction Math.random() génère un nombre aléatoire entre 0 et 1
 
-/* EXERCICE 2 : 
+/* EXERCICE 2 :
 Utiliser la fonction Math.random pour afficher dans la console
 - un nombre aléatoire compris entre 0 (inclus) et 1 (exclu)
 - un nombre aléatoire compris entre 0 (inclus) et 10 (exclu)
 - un nombre aléatoire compris entre 5 (inclus) et 15 (exclu)
 */
 
+console.log("function Math.random(...min, max) ");
 console.log(Math.random()); // Un nombre aléatoire entre 0 et 1
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
+console.log(getRandomArbitrary(0, 1));
+console.log(getRandomArbitrary(0, 10));
+console.log(getRandomArbitrary(5, 15));
 // Nous découvrirons plein d'autres fonctions prédéfinies dans la suite de ce cours.
 
 // 2°) Consulter la documentation !!
