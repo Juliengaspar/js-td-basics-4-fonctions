@@ -11,20 +11,53 @@ N.B. Faites deux versions :
    - en utilisant la syntaxe classique
    - en utilisant une arrow function
 */
+console.log("Syntaxe classique");
 
 // Syntaxe classique
+function calcMin(nbr1 , nbr2) {
+    if (nbr1>nbr2){
+        console.log(`${nbr1} est plus grand que ${nbr2}`);
+        return nbr1
+    }else if (nbr1<nbr2){
+        console.log(`${nbr1} est plus petits que ${nbr2}`);
+        return nbr2
+    }else {
+        console.log(`${nbr1} a la meme valeur que ${nbr2}`);
 
+    }
+}
+
+console.log(calcMin(4.5, 5));
+console.log(calcMin(19, 9));
+console.log(calcMin(1, 1));
 
 // Utilisation de la fonction calcMin pour calculer le minimum
 
-
+console.log("Version avec une arrow function");
 // Version avec une arrow function
+const calcMinArrow =  (x, y) => {
+    if (x>y){
+        console.log(`${x} est plus grand que ${y}`);
+        return x
+    }else if (x<y){
+        console.log(`${x} est plus petits que ${y}`);
+        return y
+    }else {
+        console.log(`${x} a la meme valeur que ${y}`);
 
+    }
+}
 // Utilisation de la fonction calcMinArrow pour calculer le minimum
-
+console.log(calcMinArrow(4.5, 5));
+console.log(calcMinArrow(19, 9));
+console.log(calcMinArrow(1, 1));
 
 // Version encore plus concise avec une arrow function
+console.log("Version encore plus concise avec une arrow function");
+
 const calcMinConcise = (a, b) => (a < b) ? a : b;
 
 // Utilisation de la fonction calcMinConcise pour calculer le minimum
-
+console.log(calcMinConcise(4.5, 5));
+console.log(calcMinConcise(19, 9));
+console.log(calcMinConcise(1, 1));
