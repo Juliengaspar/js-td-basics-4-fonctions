@@ -34,9 +34,9 @@ function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-console.log(getRandomArbitrary(0, 1));
-console.log(getRandomArbitrary(0, 10));
-console.log(getRandomArbitrary(5, 15));
+console.log(getRandomArbitrary(0, 1)); // Un nombre aléatoire entre 0 inclus et 1 exclus
+console.log(getRandomArbitrary(0, 10)); // Un nombre aléatoire entre 0 inclus et 10 exclus
+console.log(getRandomArbitrary(5, 15)); // Un nombre aléatoire entre 5 inclus et 15 exclus
 // Nous découvrirons plein d'autres fonctions prédéfinies dans la suite de ce cours.
 
 // 2°) Consulter la documentation !!

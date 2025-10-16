@@ -23,6 +23,7 @@ function calcMin(nbr1 , nbr2) {
         return nbr2
     }else {
         console.log(`${nbr1} a la meme valeur que ${nbr2}`);
+        return nbr1
 
     }
 }
@@ -44,6 +45,7 @@ const calcMinArrow =  (x, y) => {
         return y
     }else {
         console.log(`${x} a la meme valeur que ${y}`);
+        return x;
 
     }
 }
@@ -55,7 +57,7 @@ console.log(calcMinArrow(1, 1));
 // Version encore plus concise avec une arrow function
 console.log("Version encore plus concise avec une arrow function");
 
-const calcMinConcise = (a, b) => (a < b) ? a : b;
+const calcMinConcise = (x, y) => (x < y) ? x : y;
 
 // Utilisation de la fonction calcMinConcise pour calculer le minimum
 console.log(calcMinConcise(4.5, 5));

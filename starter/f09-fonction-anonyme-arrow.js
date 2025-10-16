@@ -22,7 +22,7 @@
 const myFunction2 = (prenom) => {
     return `Boujour ${prenom}`;
 }
-
+console.log(myFunction2("julien"));
 
 /*
 N.B. Dans certains cas particuliers, on peut simplifier la syntaxe des fonctions fléchées :
@@ -41,8 +41,11 @@ N.B. Dans certains cas particuliers, on peut simplifier la syntaxe des fonctions
 
 
 // Utilisation de la fonction pour saluer Thomas dans la console
-
+console.log("arow function ex2 avec parametres simplifiée" );
 const myFunction = function (prenom) {return `boujour ${prenom}`};
 // Utilisation de la fonction pour saluer Thomas dans la console
-console.log(myFunction("julien"));
+console.log(myFunction("gaspar"));
 
+console.log("arow function ex2 avec parametres simplifiée le plus concis de tous" );
+const myFunction3 = prenom =>`boujour ${prenom} !`;
+console.log(myFunction3("JULIEN"));

@@ -25,14 +25,15 @@ N.B. La déclaration, à elle toute seule, ne produit aucun résultat visible
 
 // 1°) a) Déclarer la fonction
 function direBonjour() {
+    let nom = "gaspar";
     // À vous de remplir le contenu de cette fonction pour afficher "Bonjour !" dans la console.
-    console.log("boujour")
+    console.log("boujour" + ' ' + nom);
 }
 
 // 2°) a) Exécuter la fonction (appelez la fonction direBonjour)
 direBonjour();
 // 3°) a) Stocker le résultat de l'exécution de direBonjour dans une variable resultat
-let resultat = direBonjour();
+let resultat = direBonjour;
 
 // 3°) b) Donner l'ordre d'afficher le contenu de la variable resultat dans la console
 

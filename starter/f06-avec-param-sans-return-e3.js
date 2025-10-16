@@ -34,4 +34,5 @@ function presenter(prenom, age) {
     le nombre et l'ordre des paramètres doivent être respectés.
 */
 presenter("Garance", 10);
+presenter(6, "Prosper");//dans ce cas il met 6 dans le parametres prenom et Prosper dans le parametre age ==> l'ordres est tres important .
 presenter("Prosper", 6);

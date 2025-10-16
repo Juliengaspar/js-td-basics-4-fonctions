@@ -19,6 +19,7 @@
 function double3() {
     console.log(`Le double de 3 est ${3*2}`)
 }
+double3();
 /*
 // Si on regarde toutes ces fonctions, elles ont toutes un canevas commun,
 // il y a une seule chose qui change : le nombre (3, 10, 24, 128). Tout le reste est identique.

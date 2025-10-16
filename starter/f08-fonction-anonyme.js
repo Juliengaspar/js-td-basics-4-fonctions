@@ -16,21 +16,23 @@
 */
 
 // Expression de fonction sans paramètre ni return
-function direBonjour() {
-    console.log("bonjour");
-}
 
-// Appel de la fonction
-direBonjour();
 console.log("function anonyme")
-const direBoujour = function () {
-    console.log(`Bonjour julien !`);
+const direBonjour = function () {
+    const message = `Bonjour, julien !`;
+
+    console.log(message);
 
 };
-direBoujour();
+// Appel de la fonction
+direBonjour();
 
 // b) sans paramètre mais avec return
-
+const bonjour = function() {
+        const message = `Bonjour, julien !`;
+        return message;
+    }
+console.log(bonjour());
 /* EXERCICE 2 :
 - Déclarez sous la forme d'une expression de fonction
   la fonction disBonjour qui retourne la chaîne "Bonjour !"
@@ -38,18 +40,12 @@ direBoujour();
 */
 
 // Expression de fonction sans paramètre mais avec return
-function direBonjour2() {
-return "Bonjour";
-}
-console.log("function anonyme")
-const direBoujour2 = function () {
+console.log("function ex2")
+const direBonjour2 = function () {
     return "Bonjour anonyme";
 };
-console.log(direBoujour2());
-// Utilisation de la fonction pour afficher "Bonjour !" dans la console
 console.log(direBonjour2());
-
-
+// Utilisation de la fonction pour afficher "Bonjour !" dans la console
 
 // c) avec paramètre et return
 
@@ -60,19 +56,14 @@ console.log(direBonjour2());
    - retourne ce message
 - Utilisez-la pour saluer Thomas dans la console
 */
-function direBoujour3(prenom) {
-    let message = `Bonjour ${prenom} !`;
-    return message;
-}
 // Expression de fonction avec paramètre et return
 
 // Utilisation de la fonction pour saluer Thomas dans la console
-console.log(direBoujour3("thomas"));
 
 
-console.log("function anonyme")
-const message = function (prenom) {
-    return `Bonjour ${prenom} !`;
-
-};
-console.log(message("julien"));
+console.log("function anonyme ex3 avec parametres");
+const direBonjour4 = function(prenom) {
+        const message = `Bonjour, ${prenom} !`;
+        return message;
+    }
+console.log(direBonjour4("Thomas")); // "Bonjour, Thomas !"

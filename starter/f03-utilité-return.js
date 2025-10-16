@@ -28,7 +28,7 @@ pour le réutiliser dans une autre fonction
 // 1°) Créez la fonction calcule1
 function calcule1() {
     let resultat1 = 2+3;
-    console.log(resultat1);
+    console.log(`Dans calcule1 : resultat1 =  ${resultat1}`);
     return resultat1;
 }
 
@@ -36,10 +36,10 @@ function calcule1() {
 
 function calcule2() {
     const resultat2 = (calcule1()*calcule1());
-    console.log(resultat2);
+    console.log(`Dans calcule2 : resultat2 =  ${resultat2}`);
     return resultat2;
 }
 
 // 3°) Appelez les fonctions calcule1() et calcule2() pour exécuter les calculs et afficher les résultats dans la console
-calcule1();
- calcule2()
+console.log(calcule1());
+console.log(calcule2());

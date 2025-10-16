@@ -35,12 +35,7 @@ function calculer(nbre1,operateur, nbre2) {
 }
 
 // Utilisation de la fonction calculer
-let resulta;
-resulta = calculer(4, "+", 6);
-console.log(resulta)
-resulta = calculer(4, "-", 6);
-console.log(resulta)
-resulta = calculer(2, "*", 0);
-console.log(resulta)
-resulta = calculer(12, "/", 0);
-console.log(resulta)
+console.log(calculer(4, "+", 6));
+console.log(calculer(4, "-", 6));
+console.log(calculer(2, "*", 0));
+console.log(calculer(12, "/", 0));

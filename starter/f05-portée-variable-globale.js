@@ -25,13 +25,14 @@ Une variable globale est accessible de partout
 // 3°) Appeler affiche2
 // 4°) Expliquer ce qui se passe
 function affiche1() {
-let nbre1 = 2
+const nbre1 = 2
+    return nbre1;
 }
 
 function affiche2() {
     let nbre2 = 3
     console.log(`Dans affiche2 : nbre2 =  ${nbre2}`);
-    //console.error(`Dans affiche2 : nbre1 =  ${nbre1}`);//erreurs
+    console.log(`Dans affiche2 : nbre1 =  ${affiche1()}`);//erreurs
 }
 affiche2();
 // EXERCICE 2 : Variable globale
@@ -51,7 +52,7 @@ function affiche3() {
 }
 function affiche4() {
     let nbr4=  3;
-    // console.log(`Dans affich4 : nbre3 = ${nbr3} `);
+    console.log(`Dans affich4 : nbre3 = ${nbr3} `);// cet fois il peux facilement le voirs car la constant est en dehors de la function
     console.log(`Dans affich4 : nbre4 = ${nbr4} `);
 }
 affiche3();
@@ -75,8 +76,8 @@ function affiche5() {
 }
 function affiche6() {
     let nbre6=  3;
-    console.log(`Dans affich6 : nbre3 = ${nbre5} `);
-    console.log(`Dans affich6 : nbre4 = ${nbre6} `);
+    console.log(`Dans affich6 : nbre5 = ${nbre5} `);
+    console.log(`Dans affich6 : nbre6 = ${nbre6} `);
 }
 affiche5();
 affiche6();
