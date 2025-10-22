@@ -8,90 +8,50 @@ FONCTIONS - PRÉPA 4 : Date valide - version 2
 - Utilisez isValid pour décider si votre date est valide
   avant d'afficher votre message dans la console
 */
+const userDays = parseInt(prompt("Entrez le jour"));
+const userMonth = parseInt(prompt("Entrez le mois"));
+const userYear = parseInt(prompt("Entrez une année: "));
+
 
 // Fonction pour vérifier si une année est bissextile
-function isBissextile(year) {
-    let isBissextile = false;
-    //si elle est divisible par 4
-    if (year%4 === 0) {
-        if (year % 100 !== 0) {
-            isBissextile = true;
-            if (year % 400 === 0) {
-                isBissextile = false;
-
-            }else{
-                isBissextile = true;
-
-            }
-        }
-        //tester si elle est pas un multiples dec 4
-    }else {
-        isBissextile = false
-    }
-    if (isBissextile === true) {
-        console.log(`${year} est une années bisextile`);
-    }else {
-        console.log(`${year} n'est  pas une années bisextile`);
-
-    }
-    return isBissextile;
-
-
+function isLeap(year) {
+    return ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0) )
 }
 
 // Fonction pour vérifier si une date est valide
-function dateValid(day, month, year) {
-    isBissextile(year);
-    let isValide = true;
-    if((day<1)|| (day>31)) {
-        isValide = !isValide;
+function isDateValid(day, month, year) {
+    let maxDays = 31;
+if (year <1 || month < 1 || day < 1) {
+    console.log(`L’années , le mois , le jour doivent êtres positif : année ->${userYear} moins ->${userMonth} -> jours ->${userDays}`)
+    return false
+}
+if (month >12 ) {
+    console.log('Le mois doit etres plus petit que 12')
+    return false
+}
+if (month ===4 || month ===6 || month ===9 || month ===11) {
+    maxDays = 30;
+}
+if (month === 2) {
+    if (isLeap(year)) {
+        maxDays = 29;
+    } else {
+        maxDays = 28;
     }
-    if((month<1)|| (month>12)) {
-        isValide = !isValide;
+}
+    if (day>maxDays) {
+        console.log(`le nombres de jours dans le mois dois etres inferior ou egale à ${maxDays} jours.`);
+        return false;
     }
-
-    if (month%2 === 0) {
-
-        if((day<=1)|| (day=>30)) {
-            isValide = false;
-        }
-    }else {
-        if((day<=1)|| (day=>31)) {
-            isValide = false;
-        }
-    }
-
-    if(month===2) {
-        if(isBissextile === true) {
-            if(day<=29) {
-                isValide = true;
-            }else {
-                isValide = false;
-            }
-        }else {
-            if(day<=28) {
-                isValide = true;
-            }else {
-                isValide = false;
-            }
-        }
-    }
-
-
-    if(isValide === false){
-        console.log("date invalide")
-    }else {
-        console.log(`date valide ${day} : ${month} : ${year}`)
-    }
-    return isValide;
+return true;
 }
 
 // Demander à l'utilisateur de saisir une date
-const userDays = parseInt(prompt("entrey un le numero d'un jour entre [1-31]"));
-const userMonth = parseInt(prompt("entrey un le numero d'un mois entre [1-12]"));
-const userYear = parseInt(prompt("entrey un le numero d'une year entre "));
 
 // Utilisation de la fonction isValid pour vérifier la date
-console.log(dateValid(userDays,userMonth,userYear));
-dateValid(userDays,userMonth,userYear);
+if (isDateValid(userDays,userMonth,userYear )) {
+    console.log(`super c‘est une bonne ${userYear}, ${userMonth}, ${userDays} date`)
+}else {
+    console.log(`date invalid ${userYear}, ${userMonth}, ${userDays}`)
 
+}
